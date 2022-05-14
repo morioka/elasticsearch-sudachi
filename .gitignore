@@ -27,4 +27,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-
+# files and directories : examples
+quiz-*.tsv
+check_and_preprocess_data.ipynb

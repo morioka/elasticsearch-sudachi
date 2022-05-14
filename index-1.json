@@ -1,0 +1,107 @@
+{
+  "settings": {
+    "number_of_shards": "1",
+    "analysis": {
+      "analyzer": {
+        "sudachi_analyzer": {
+          "filter": [],
+          "type": "custom",
+          "tokenizer": "sudachi_tokenizer"
+        }
+      },
+      "tokenizer": {
+        "sudachi_tokenizer": {
+          "sudachi_split": "search",
+          "type": "sudachi_tokenizer",
+          "discard_punctuation": "true",
+          "resources_path": "/usr/share/elasticsearch/config/sudachi/",
+          "settings_path": "/usr/share/elasticsearch/config/sudachi/sudachi.json",
+          "additional_settings": "{\"systemDict\":\"system_full.dic\"}"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "competition": {
+        "type": "text",
+        "analyzer": "sudachi_analyzer",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "genre1": {
+        "type": "keyword"
+      },
+      "genre2": {
+        "type": "keyword"
+      },
+      "question": {
+        "type": "text",
+        "analyzer": "sudachi_analyzer",
+        "fielddata": true,
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "answer": {
+        "type": "text",
+        "analyzer": "sudachi_analyzer",
+        "fielddata": true,
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "hint": {
+        "type": "text",
+        "analyzer": "sudachi_analyzer",
+        "fielddata": true,
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "explanation": {
+        "type": "text",
+        "analyzer": "sudachi_analyzer",
+        "fielddata": true,
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "author": {
+        "type": "keyword"
+      },
+      "difficulty": {
+        "type": "float"
+      },
+      "question_id": {
+        "type": "unsigned_long"
+      },
+      "question_number": {
+        "type": "integer"
+      },
+      "question_length": {
+        "type": "integer"
+      },
+      "date": {
+        "type": "date",
+        "format": "date"
+      }
+    }
+  }
+}
