@@ -31,3 +31,15 @@ bash ./delete_index.sh
 bash ./bulk_insert.sh
 ```
 
+## 今後
+
+- sudachiのフィルタ見直し
+- ベクトルの類似度に基づく検索
+  - Bing: elasticsearch ベクトル
+  - [Elasticsearchのベクトルフィールドをテキスト類似性検索に活用する | Elastic Blog](https://www.elastic.co/jp/blog/text-similarity-search-with-vectors-in-elasticsearch)
+  - [Elasticsearchを用いて類似度ベクトル検索をやってみてわかったこと - ログミーTech](https://logmi.jp/tech/articles/322022)
+  - [ElasticsearchでSudachiとベクトル検索を組み合わせて使う方法 ①Sudachi導入編 | 株式会社AI Shift](https://www.ai-shift.co.jp/techblog/168)
+  - [ElasticsearchでSudachiとベクトル検索を組み合わせて使う方法 ②ベクトル検索編 | 株式会社AI Shift](https://www.ai-shift.co.jp/techblog/460)
+  - [Elasticsearchを使用したスケーラブルなセマンティックベクトル検索](https://ichi.pro/elasticsearch-o-shiyoshita-suke-raburu-na-semanthikku-bekutoru-kensaku-254672523082382)
+  - [Elasticsearchで類似ベクトル探索 / 類似画像検索 - Qiita](https://qiita.com/kumonkumon/items/a18b157f1888f1edd8f2)
+  - [続) Elasticsearchで類似ベクトル探索 / 類似画像検索 - Qiita](https://qiita.com/kumonkumon/items/322b75296ec356a347f3)
