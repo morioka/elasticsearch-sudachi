@@ -29,6 +29,7 @@
         "competition": {
           "type": "text",
           "analyzer": "sudachi_analyzer",
+          "fielddata": true,
           "fields": {
             "keyword": {
               "type": "keyword",
